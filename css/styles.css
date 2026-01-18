@@ -205,9 +205,9 @@ a:hover {
     bottom: 0;
     background-color: transparent;
     /* Eight-pointed star (Rub el Hizb) - two overlapping squares */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23d4a84b' stroke-width='1.5'%3E%3C!-- First square --%3E%3Crect x='25' y='25' width='50' height='50' opacity='0.5'/%3E%3C!-- Second square rotated 45deg to create 8-pointed star --%3E%3Crect x='25' y='25' width='50' height='50' transform='rotate(45 50 50)' opacity='0.5'/%3E%3C!-- Inner decorative square --%3E%3Crect x='35' y='35' width='30' height='30' opacity='0.3'/%3E%3Crect x='35' y='35' width='30' height='30' transform='rotate(45 50 50)' opacity='0.3'/%3E%3C!-- Center dot --%3E%3Ccircle cx='50' cy='50' r='3' fill='%23d4a84b' opacity='0.4'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 100px 100px;
-    opacity: 0.6;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23d4a84b' stroke-width='1'%3E%3C!-- First square --%3E%3Crect x='25' y='25' width='50' height='50' opacity='0.3'/%3E%3C!-- Second square rotated 45deg to create 8-pointed star --%3E%3Crect x='25' y='25' width='50' height='50' transform='rotate(45 50 50)' opacity='0.3'/%3E%3C!-- Center dot --%3E%3Ccircle cx='50' cy='50' r='2' fill='%23d4a84b' opacity='0.2'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 120px 120px;
+    opacity: 0.25;
 }
 
 .hero-pattern::before {
@@ -218,8 +218,9 @@ a:hover {
     right: 0;
     bottom: 0;
     /* Larger 8-pointed stars with more detail */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23d4a84b'%3E%3C!-- Outer 8-pointed star frame --%3E%3Crect x='50' y='50' width='100' height='100' stroke-width='1' opacity='0.25'/%3E%3Crect x='50' y='50' width='100' height='100' transform='rotate(45 100 100)' stroke-width='1' opacity='0.25'/%3E%3C!-- Connecting lines to corners --%3E%3Cline x1='0' y1='0' x2='50' y2='50' stroke-width='0.5' opacity='0.2'/%3E%3Cline x1='200' y1='0' x2='150' y2='50' stroke-width='0.5' opacity='0.2'/%3E%3Cline x1='0' y1='200' x2='50' y2='150' stroke-width='0.5' opacity='0.2'/%3E%3Cline x1='200' y1='200' x2='150' y2='150' stroke-width='0.5' opacity='0.2'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 200px 200px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23d4a84b'%3E%3C!-- Outer 8-pointed star frame --%3E%3Crect x='50' y='50' width='100' height='100' stroke-width='0.75' opacity='0.15'/%3E%3Crect x='50' y='50' width='100' height='100' transform='rotate(45 100 100)' stroke-width='0.75' opacity='0.15'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 240px 240px;
+    opacity: 0.4;
 }
 
 .hero-pattern::after {
@@ -230,9 +231,9 @@ a:hover {
     right: 0;
     bottom: 0;
     /* Interlocking geometric pattern */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cg fill='none' stroke='%23d4a84b' stroke-width='0.75'%3E%3C!-- Diamond grid --%3E%3Cpath d='M75,0 L150,75 L75,150 L0,75 Z' opacity='0.2'/%3E%3C!-- Octagon --%3E%3Cpolygon points='75,15 120,35 135,75 120,115 75,135 30,115 15,75 30,35' opacity='0.15'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 150px 150px;
-    opacity: 0.5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cg fill='none' stroke='%23d4a84b' stroke-width='0.5'%3E%3C!-- Diamond grid --%3E%3Cpath d='M75,0 L150,75 L75,150 L0,75 Z' opacity='0.12'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 180px 180px;
+    opacity: 0.3;
 }
 
 .hero-content {
