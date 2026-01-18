@@ -204,9 +204,10 @@ a:hover {
     right: 0;
     bottom: 0;
     background-color: transparent;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23d4a84b' stroke-width='1'%3E%3C!-- Eight-pointed star (Rub el Hizb) --%3E%3Cpolygon points='40,5 45,35 75,40 45,45 40,75 35,45 5,40 35,35' opacity='0.4'/%3E%3C!-- Inner star rotated --%3E%3Cpolygon points='40,15 50,35 70,40 50,45 40,65 30,45 10,40 30,35' opacity='0.25'/%3E%3C!-- Diamond frame --%3E%3Crect x='25' y='25' width='30' height='30' transform='rotate(45 40 40)' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 80px 80px;
-    opacity: 0.5;
+    /* Eight-pointed star (Rub el Hizb) - two overlapping squares */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23d4a84b' stroke-width='1.5'%3E%3C!-- First square --%3E%3Crect x='25' y='25' width='50' height='50' opacity='0.5'/%3E%3C!-- Second square rotated 45deg to create 8-pointed star --%3E%3Crect x='25' y='25' width='50' height='50' transform='rotate(45 50 50)' opacity='0.5'/%3E%3C!-- Inner decorative square --%3E%3Crect x='35' y='35' width='30' height='30' opacity='0.3'/%3E%3Crect x='35' y='35' width='30' height='30' transform='rotate(45 50 50)' opacity='0.3'/%3E%3C!-- Center dot --%3E%3Ccircle cx='50' cy='50' r='3' fill='%23d4a84b' opacity='0.4'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 100px 100px;
+    opacity: 0.6;
 }
 
 .hero-pattern::before {
@@ -216,8 +217,9 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23d4a84b' stroke-width='0.75'%3E%3C!-- Large diamond lattice --%3E%3Cpath d='M60,0 L120,60 L60,120 L0,60 Z' opacity='0.2'/%3E%3Cpath d='M60,20 L100,60 L60,100 L20,60 Z' opacity='0.15'/%3E%3C!-- Connecting lines --%3E%3Cline x1='0' y1='0' x2='60' y2='60' opacity='0.15'/%3E%3Cline x1='120' y1='0' x2='60' y2='60' opacity='0.15'/%3E%3Cline x1='0' y1='120' x2='60' y2='60' opacity='0.15'/%3E%3Cline x1='120' y1='120' x2='60' y2='60' opacity='0.15'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 120px 120px;
+    /* Larger 8-pointed stars with more detail */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23d4a84b'%3E%3C!-- Outer 8-pointed star frame --%3E%3Crect x='50' y='50' width='100' height='100' stroke-width='1' opacity='0.25'/%3E%3Crect x='50' y='50' width='100' height='100' transform='rotate(45 100 100)' stroke-width='1' opacity='0.25'/%3E%3C!-- Connecting lines to corners --%3E%3Cline x1='0' y1='0' x2='50' y2='50' stroke-width='0.5' opacity='0.2'/%3E%3Cline x1='200' y1='0' x2='150' y2='50' stroke-width='0.5' opacity='0.2'/%3E%3Cline x1='0' y1='200' x2='50' y2='150' stroke-width='0.5' opacity='0.2'/%3E%3Cline x1='200' y1='200' x2='150' y2='150' stroke-width='0.5' opacity='0.2'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 200px 200px;
 }
 
 .hero-pattern::after {
@@ -227,9 +229,10 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23d4a84b'%3E%3C!-- Outer octagon frame --%3E%3Cpolygon points='80,10 130,30 150,80 130,130 80,150 30,130 10,80 30,30' stroke-width='1' opacity='0.2'/%3E%3C!-- Inner octagon --%3E%3Cpolygon points='80,30 115,45 130,80 115,115 80,130 45,115 30,80 45,45' stroke-width='0.75' opacity='0.15'/%3E%3C!-- Center star --%3E%3Ccircle cx='80' cy='80' r='8' opacity='0.25'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 160px 160px;
-    opacity: 0.7;
+    /* Interlocking geometric pattern */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cg fill='none' stroke='%23d4a84b' stroke-width='0.75'%3E%3C!-- Diamond grid --%3E%3Cpath d='M75,0 L150,75 L75,150 L0,75 Z' opacity='0.2'/%3E%3C!-- Octagon --%3E%3Cpolygon points='75,15 120,35 135,75 120,115 75,135 30,115 15,75 30,35' opacity='0.15'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 150px 150px;
+    opacity: 0.5;
 }
 
 .hero-content {
@@ -240,8 +243,8 @@ a:hover {
 }
 
 .hero-ornament {
-    width: 280px;
-    height: 50px;
+    width: 300px;
+    height: 60px;
     margin: 0 auto var(--spacing-md);
     position: relative;
     display: flex;
@@ -249,16 +252,14 @@ a:hover {
     justify-content: center;
 }
 
-/* Central eight-pointed star */
+/* Central eight-pointed star (two overlapping squares) */
 .hero-ornament::before {
     content: '';
     position: absolute;
-    width: 36px;
-    height: 36px;
-    background-color: var(--color-gold);
-    clip-path: polygon(
-        50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%
-    );
+    width: 44px;
+    height: 44px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Cg fill='%23d4a84b'%3E%3Crect x='11' y='11' width='22' height='22'/%3E%3Crect x='11' y='11' width='22' height='22' transform='rotate(45 22 22)'/%3E%3C/g%3E%3C/svg%3E") no-repeat center;
+    background-size: contain;
 }
 
 /* Extending decorative lines */
@@ -266,17 +267,17 @@ a:hover {
     content: '';
     position: absolute;
     width: 100%;
-    height: 100%;
-    background:
-        /* Left line with diamonds */
-        linear-gradient(90deg, transparent 0%, var(--color-gold) 5%, var(--color-gold) 7%, transparent 7%, transparent 12%, var(--color-gold) 12%, var(--color-gold) 13%, transparent 13%, transparent 18%, var(--color-gold) 18%, var(--color-gold) 19%, transparent 19%, transparent 35%, transparent 35%),
-        /* Right line with diamonds */
-        linear-gradient(90deg, transparent 65%, transparent 81%, var(--color-gold) 81%, var(--color-gold) 82%, transparent 82%, transparent 87%, var(--color-gold) 87%, var(--color-gold) 88%, transparent 88%, transparent 93%, var(--color-gold) 93%, var(--color-gold) 95%, transparent 95%),
-        /* Center horizontal line */
-        linear-gradient(90deg, transparent 0%, var(--color-gold) 5%, var(--color-gold) 35%, transparent 35%, transparent 65%, var(--color-gold) 65%, var(--color-gold) 95%, transparent 100%);
-    background-size: 100% 2px;
-    background-position: center;
-    background-repeat: no-repeat;
+    height: 2px;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        var(--color-gold) 5%,
+        var(--color-gold) 38%,
+        transparent 38%,
+        transparent 62%,
+        var(--color-gold) 62%,
+        var(--color-gold) 95%,
+        transparent 100%
+    );
 }
 
 .hero-bismillah {
