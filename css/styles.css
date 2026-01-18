@@ -197,7 +197,7 @@ a:hover {
 }
 
 /* Islamic Geometric Pattern - Inspired by Al Sayyedah Zeinab Shrine tilework */
-/* True tessellating 8-pointed stars - rotated square spans full tile so corners touch */
+/* Tessellating 8-pointed stars (Rub el Hizb) - two overlapping squares */
 .hero-pattern {
     position: absolute;
     top: 0;
@@ -205,8 +205,9 @@ a:hover {
     right: 0;
     bottom: 0;
     background-color: transparent;
-    /* 8-pointed star: square + rotated square that reaches tile edges */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cg fill='none' stroke='%23d4a84b' stroke-width='0.8'%3E%3Crect x='10.35' y='10.35' width='29.3' height='29.3' opacity='0.4'/%3E%3Crect x='4' y='4' width='42' height='42' transform='rotate(45 25 25)' opacity='0.4'/%3E%3Ccircle cx='25' cy='25' r='2' fill='%23d4a84b' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+    /* 8-pointed star: two same-size squares overlapping, one rotated 45deg */
+    /* Square size 20px centered in 50px tile, corners of rotated square touch at tile edges */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cg fill='none' stroke='%23d4a84b' stroke-width='1' opacity='0.5'%3E%3Crect x='15' y='15' width='20' height='20'/%3E%3Crect x='15' y='15' width='20' height='20' transform='rotate(45 25 25)'/%3E%3C/g%3E%3Ccircle cx='25' cy='25' r='2' fill='%23d4a84b' opacity='0.4'/%3E%3C/svg%3E");
     background-size: 50px 50px;
     opacity: 0.35;
 }
@@ -218,8 +219,8 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    /* Inner decorative details */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cg fill='none' stroke='%23d4a84b' stroke-width='0.5'%3E%3Crect x='15' y='15' width='20' height='20' opacity='0.25'/%3E%3Crect x='10.35' y='10.35' width='29.3' height='29.3' transform='rotate(45 25 25)' opacity='0.25'/%3E%3C/g%3E%3C/svg%3E");
+    /* Smaller inner 8-pointed star for depth */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cg fill='none' stroke='%23d4a84b' stroke-width='0.5' opacity='0.3'%3E%3Crect x='18' y='18' width='14' height='14'/%3E%3Crect x='18' y='18' width='14' height='14' transform='rotate(45 25 25)'/%3E%3C/g%3E%3C/svg%3E");
     background-size: 50px 50px;
     opacity: 0.5;
 }
