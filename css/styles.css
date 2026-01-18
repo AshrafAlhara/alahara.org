@@ -196,16 +196,28 @@ a:hover {
     overflow: hidden;
 }
 
+/* Islamic Geometric Pattern - Inspired by Al Sayyedah Zeinab Shrine tilework */
 .hero-pattern {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.1;
+    opacity: 0.35;
     background-image:
-        repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(212, 168, 75, 0.3) 50px, rgba(212, 168, 75, 0.3) 51px),
-        repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(212, 168, 75, 0.3) 50px, rgba(212, 168, 75, 0.3) 51px);
+        /* Eight-pointed star pattern (Rub el Hizb) */
+        radial-gradient(circle at 50% 50%, transparent 8px, rgba(212, 168, 75, 0.4) 8px, rgba(212, 168, 75, 0.4) 10px, transparent 10px),
+        radial-gradient(circle at 0% 50%, transparent 8px, rgba(212, 168, 75, 0.3) 8px, rgba(212, 168, 75, 0.3) 10px, transparent 10px),
+        radial-gradient(circle at 100% 50%, transparent 8px, rgba(212, 168, 75, 0.3) 8px, rgba(212, 168, 75, 0.3) 10px, transparent 10px),
+        radial-gradient(circle at 50% 0%, transparent 8px, rgba(212, 168, 75, 0.3) 8px, rgba(212, 168, 75, 0.3) 10px, transparent 10px),
+        radial-gradient(circle at 50% 100%, transparent 8px, rgba(212, 168, 75, 0.3) 8px, rgba(212, 168, 75, 0.3) 10px, transparent 10px),
+        /* Diamond lattice pattern */
+        linear-gradient(45deg, transparent 48%, rgba(212, 168, 75, 0.25) 48%, rgba(212, 168, 75, 0.25) 52%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, rgba(212, 168, 75, 0.25) 48%, rgba(212, 168, 75, 0.25) 52%, transparent 52%),
+        /* Grid overlay */
+        repeating-linear-gradient(0deg, transparent, transparent 48px, rgba(212, 168, 75, 0.15) 48px, rgba(212, 168, 75, 0.15) 50px),
+        repeating-linear-gradient(90deg, transparent, transparent 48px, rgba(212, 168, 75, 0.15) 48px, rgba(212, 168, 75, 0.15) 50px);
+    background-size: 100px 100px, 100px 100px, 100px 100px, 100px 100px, 100px 100px, 50px 50px, 50px 50px, 50px 50px, 50px 50px;
 }
 
 .hero-pattern::before {
@@ -216,8 +228,26 @@ a:hover {
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(circle at 25% 25%, rgba(212, 168, 75, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 75% 75%, rgba(212, 168, 75, 0.15) 0%, transparent 50%);
+        /* Octagonal frame accents */
+        conic-gradient(from 22.5deg at 50% 50%, transparent 0deg, rgba(212, 168, 75, 0.12) 22.5deg, transparent 45deg, rgba(212, 168, 75, 0.12) 67.5deg, transparent 90deg, rgba(212, 168, 75, 0.12) 112.5deg, transparent 135deg, rgba(212, 168, 75, 0.12) 157.5deg, transparent 180deg, rgba(212, 168, 75, 0.12) 202.5deg, transparent 225deg, rgba(212, 168, 75, 0.12) 247.5deg, transparent 270deg, rgba(212, 168, 75, 0.12) 292.5deg, transparent 315deg, rgba(212, 168, 75, 0.12) 337.5deg, transparent 360deg);
+    background-size: 200px 200px;
+}
+
+.hero-pattern::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        /* Subtle arabesque curves */
+        radial-gradient(ellipse 80px 40px at 50% 0%, transparent 60%, rgba(212, 168, 75, 0.2) 60%, rgba(212, 168, 75, 0.2) 70%, transparent 70%),
+        radial-gradient(ellipse 80px 40px at 50% 100%, transparent 60%, rgba(212, 168, 75, 0.2) 60%, rgba(212, 168, 75, 0.2) 70%, transparent 70%),
+        radial-gradient(ellipse 40px 80px at 0% 50%, transparent 60%, rgba(212, 168, 75, 0.2) 60%, rgba(212, 168, 75, 0.2) 70%, transparent 70%),
+        radial-gradient(ellipse 40px 80px at 100% 50%, transparent 60%, rgba(212, 168, 75, 0.2) 60%, rgba(212, 168, 75, 0.2) 70%, transparent 70%);
+    background-size: 150px 150px;
+    opacity: 0.6;
 }
 
 .hero-content {
@@ -228,10 +258,39 @@ a:hover {
 }
 
 .hero-ornament {
-    width: 120px;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+    width: 200px;
+    height: 40px;
     margin: 0 auto var(--spacing-md);
+    background:
+        /* Central diamond */
+        linear-gradient(45deg, transparent 40%, var(--color-gold) 40%, var(--color-gold) 60%, transparent 60%),
+        linear-gradient(-45deg, transparent 40%, var(--color-gold) 40%, var(--color-gold) 60%, transparent 60%);
+    background-size: 20px 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-ornament::before,
+.hero-ornament::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 70px;
+    background: linear-gradient(90deg, transparent, var(--color-gold));
+}
+
+.hero-ornament::before {
+    right: 50%;
+    margin-right: 15px;
+    background: linear-gradient(90deg, transparent, var(--color-gold));
+}
+
+.hero-ornament::after {
+    left: 50%;
+    margin-left: 15px;
+    background: linear-gradient(90deg, var(--color-gold), transparent);
 }
 
 .hero-bismillah {
@@ -310,20 +369,53 @@ a:hover {
 .ornament-line {
     flex: 1;
     max-width: 150px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--color-gold), var(--color-gold-dark));
+    height: 12px;
+    position: relative;
+    background:
+        repeating-linear-gradient(90deg,
+            var(--color-gold) 0px, var(--color-gold) 4px,
+            transparent 4px, transparent 8px,
+            var(--color-gold-dark) 8px, var(--color-gold-dark) 10px,
+            transparent 10px, transparent 14px
+        );
+    background-size: 28px 2px;
+    background-position: center;
+    background-repeat: repeat-x;
 }
 
-.ornament-line:last-child {
-    background: linear-gradient(90deg, var(--color-gold-dark), var(--color-gold), transparent);
+.ornament-line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-gold-dark));
+}
+
+.ornament-line:last-child::before {
+    background: linear-gradient(90deg, var(--color-gold-dark), transparent);
 }
 
 .ornament-line.light {
-    background: linear-gradient(90deg, transparent, var(--color-gold-light), var(--color-gold));
+    background:
+        repeating-linear-gradient(90deg,
+            var(--color-gold-light) 0px, var(--color-gold-light) 4px,
+            transparent 4px, transparent 8px,
+            var(--color-gold) 8px, var(--color-gold) 10px,
+            transparent 10px, transparent 14px
+        );
+    background-size: 28px 2px;
+    background-position: center;
+    background-repeat: repeat-x;
 }
 
-.ornament-line.light:last-child {
-    background: linear-gradient(90deg, var(--color-gold), var(--color-gold-light), transparent);
+.ornament-line.light::before {
+    background: linear-gradient(90deg, transparent, var(--color-gold));
+}
+
+.ornament-line.light:last-child::before {
+    background: linear-gradient(90deg, var(--color-gold), transparent);
 }
 
 /* ===========================================
@@ -358,6 +450,33 @@ a:hover {
 .values {
     padding: var(--spacing-xl) 0;
     background: linear-gradient(180deg, var(--color-blue-deep) 0%, var(--color-blue-tile) 100%);
+    position: relative;
+}
+
+/* Decorative geometric border - top and bottom */
+.values::before,
+.values::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background:
+        /* Interlocking diamond pattern */
+        linear-gradient(45deg, transparent 33%, var(--color-gold) 33%, var(--color-gold) 40%, transparent 40%),
+        linear-gradient(-45deg, transparent 33%, var(--color-gold) 33%, var(--color-gold) 40%, transparent 40%),
+        linear-gradient(45deg, transparent 60%, var(--color-gold) 60%, var(--color-gold) 67%, transparent 67%),
+        linear-gradient(-45deg, transparent 60%, var(--color-gold) 60%, var(--color-gold) 67%, transparent 67%);
+    background-size: 30px 20px;
+    opacity: 0.6;
+}
+
+.values::before {
+    top: 0;
+}
+
+.values::after {
+    bottom: 0;
 }
 
 .values h2 {
@@ -394,15 +513,34 @@ a:hover {
     justify-content: center;
 }
 
+/* Eight-pointed Islamic star (Rub el Hizb) */
 .geometric-star {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
+    position: relative;
+}
+
+.geometric-star::before,
+.geometric-star::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
     background: var(--color-gold);
-    clip-path: polygon(
-        50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%,
-        50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
-    );
+    transform-origin: center;
+}
+
+.geometric-star::before {
+    transform: translate(-50%, -50%) rotate(0deg);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.geometric-star::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 .value-card h3 {
