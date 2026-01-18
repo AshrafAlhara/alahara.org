@@ -197,7 +197,7 @@ a:hover {
 }
 
 /* Islamic Geometric Pattern - Inspired by Al Sayyedah Zeinab Shrine tilework */
-/* Adjacent/tessellating 8-pointed stars */
+/* True tessellating 8-pointed stars - rotated square spans full tile so corners touch */
 .hero-pattern {
     position: absolute;
     top: 0;
@@ -205,10 +205,10 @@ a:hover {
     right: 0;
     bottom: 0;
     background-color: transparent;
-    /* Tessellating 8-pointed stars - stars touch at their points */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'%3E%3Cg fill='none' stroke='%23d4a84b' stroke-width='0.8'%3E%3Crect x='17.5' y='17.5' width='35' height='35' opacity='0.35'/%3E%3Crect x='17.5' y='17.5' width='35' height='35' transform='rotate(45 35 35)' opacity='0.35'/%3E%3Ccircle cx='35' cy='35' r='2' fill='%23d4a84b' opacity='0.25'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 70px 70px;
-    opacity: 0.3;
+    /* 8-pointed star: square + rotated square that reaches tile edges */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cg fill='none' stroke='%23d4a84b' stroke-width='0.8'%3E%3Crect x='10.35' y='10.35' width='29.3' height='29.3' opacity='0.4'/%3E%3Crect x='4' y='4' width='42' height='42' transform='rotate(45 25 25)' opacity='0.4'/%3E%3Ccircle cx='25' cy='25' r='2' fill='%23d4a84b' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 50px 50px;
+    opacity: 0.35;
 }
 
 .hero-pattern::before {
@@ -218,23 +218,14 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    /* Connecting lines between adjacent stars */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'%3E%3Cg fill='none' stroke='%23d4a84b' stroke-width='0.5'%3E%3Cline x1='0' y1='35' x2='17.5' y2='35' opacity='0.2'/%3E%3Cline x1='52.5' y1='35' x2='70' y2='35' opacity='0.2'/%3E%3Cline x1='35' y1='0' x2='35' y2='17.5' opacity='0.2'/%3E%3Cline x1='35' y1='52.5' x2='35' y2='70' opacity='0.2'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 70px 70px;
-    opacity: 0.4;
+    /* Inner decorative details */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cg fill='none' stroke='%23d4a84b' stroke-width='0.5'%3E%3Crect x='15' y='15' width='20' height='20' opacity='0.25'/%3E%3Crect x='10.35' y='10.35' width='29.3' height='29.3' transform='rotate(45 25 25)' opacity='0.25'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 50px 50px;
+    opacity: 0.5;
 }
 
 .hero-pattern::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* Small diamonds at intersection points */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'%3E%3Cg fill='none' stroke='%23d4a84b' stroke-width='0.4'%3E%3Crect x='0' y='0' width='8' height='8' transform='rotate(45 0 0)' opacity='0.15'/%3E%3Crect x='70' y='0' width='8' height='8' transform='rotate(45 70 0)' opacity='0.15'/%3E%3Crect x='0' y='70' width='8' height='8' transform='rotate(45 0 70)' opacity='0.15'/%3E%3Crect x='70' y='70' width='8' height='8' transform='rotate(45 70 70)' opacity='0.15'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 70px 70px;
-    opacity: 0.35;
+    display: none;
 }
 
 .hero-content {
